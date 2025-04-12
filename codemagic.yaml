@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 workflows:
   android:
     name: Android build
@@ -13,3 +14,20 @@ workflows:
         arguments:
           platform: android
           build_mode: release
+=======
+workflows:
+  android:
+    name: Android build
+    max_build_duration: 120
+    # Build commands
+    steps:
+      - name: Checkout code
+        action: checkout
+      - name: Install dependencies
+        action: install_dependencies
+      - name: Build APK
+        action: build
+        arguments:
+          platform: android
+          build_mode: release
+>>>>>>> 55e2e4ba57396bf00038c38412282ff8da796278
