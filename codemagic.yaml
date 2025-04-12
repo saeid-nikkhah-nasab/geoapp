@@ -1,0 +1,14 @@
+workflows:
+  android:
+    name: Android build
+    max_build_duration: 120
+    build:
+      - name: Build APK
+        script:
+          # Run Gradle build command to build your Android app
+          - flutter pub get
+          - flutter build apk
+    publish:
+      - provider: firebase
+        app_id: your_firebase_app_id
+        token: your_firebase_token
