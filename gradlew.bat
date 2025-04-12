@@ -1,0 +1,1 @@
+echo This is a dummy gradlew.bat file. Replace with real one
